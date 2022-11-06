@@ -2,7 +2,9 @@
   "name": "spinnaker-sdk",
   "version": "1.0.0",
   "description": "",
-  "main": "login.js",
+  "main": "src/index.js",
+  "bin": "bin/spinnaker-sdk",
+  "repository": "https://github.com/MiguelSavignano/spinnaker-sdk",
   "dependencies": {
     "axios": "^1.1.3",
     "express": "^4.18.2",
@@ -14,6 +16,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "migue.masx@gmail.com",
+  "license": "MIT"
 }
