@@ -1,13 +1,20 @@
 ### Spinnaker SDK
 
+HTTP client to interact with [spinnaker API](https://spinnaker.io/docs/reference/api/docs.html)
 
-## Github Auth2
 
-Is required fetch the github token using a Github app
+## Github OAuth 2.0
+
+1. Get Client ID and Secret
+Consult the [GitHub OAuth 2.0 documentation](https://docs.github.com/es/developers/apps/building-oauth-apps/authorizing-oauth-apps) and [register a new OAuth 2.0 application](https://github.com/settings/applications/new) to obtain a client ID and client secret.
+
+
+2. Generate Github access token
 
 ```
 spinnaker-sdk github-auth
 ```
+Should generate `token.json` file.
 
 ## API request
 
