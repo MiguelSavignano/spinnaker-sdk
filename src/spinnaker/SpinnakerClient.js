@@ -1,11 +1,11 @@
 const axios = require('axios')
 
 class SpinnakerClient {
-  constructor(baseURL, token) {
+  constructor(baseURL, { access_token } = {}) {
     this.axios = axios.create({
       baseURL,
       maxRedirects: 0,
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: `Bearer ${access_token}` },
     })
   }
 
