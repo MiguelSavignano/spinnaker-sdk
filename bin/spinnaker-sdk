@@ -1,0 +1,10 @@
+#! /usr/bin/env node
+const { GithubOauthServer } = require('../src/auth/GithubOauthServer')
+
+const [,,command] = process.argv
+
+if ( command == 'github-auth' ) {
+  GithubOauthServer.app.listen(GithubOauthServer.PORT)
+  console.log("Github authorization url:\n")
+  console.log(GithubOauthServer.authUrl)
+}

@@ -1,7 +1,6 @@
-#! /usr/bin/env node
 const express = require('express')
 const fs = require('fs')
-const { GitubAuth } = require('../src/auth/GitubAuth')
+const { GitubAuth } = require('./GitubAuth')
 
 const app = express()
 const { PORT = 8085 } = process.env
@@ -20,9 +19,7 @@ app.get('/callback', async (req, res) => {
   process.exit(0)
 })
 
-app.listen(PORT)
 
 const authUrl = gitubAuth.authorizeUrl()
 
-console.log("Github authorization url:\n")
-console.log(authUrl)
+module.exports = { GithubOauthServer: { app, authUrl, gitubAuth, PORT } }
