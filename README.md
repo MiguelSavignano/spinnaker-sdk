@@ -12,6 +12,12 @@ Consult the [GitHub OAuth 2.0 documentation](https://docs.github.com/es/develope
 2. Generate Github access token
 
 ```
+export CLIENT_ID=$GH_APP_CLIENT_ID
+export SECRET_ID=$GH_APP_SECRET_ID
+```
+
+
+```
 spinnaker-sdk github-auth
 ```
 Should generate `token.json` file.
